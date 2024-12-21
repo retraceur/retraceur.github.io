@@ -24,7 +24,9 @@ export default defineConfig({
 				},
 				{
 					label: 'API',
-					autogenerate: { directory: 'api' },
+					items: [
+						'api/rest'
+					],
 				},
 			],
 		}),
