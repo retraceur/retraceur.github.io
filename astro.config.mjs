@@ -7,6 +7,17 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'Retraceur',
+			defaultLocale: 'root',
+			locales: {
+				root: {
+					label: 'English',
+					lang: 'en',
+				},
+				'fr': {
+					label: 'Français',
+					lang: 'fr',
+				},
+			},
 			customCss: [
 				'./src/styles/retraceur.css',
 			],
@@ -20,13 +31,26 @@ export default defineConfig({
 			sidebar: [
 				{
 					label: 'Getting started',
+					translations: {
+						'fr': 'Premiers pas',
+					},
 					autogenerate: { directory: 'getting-started' },
 				},
 				{
 					label: 'API',
+					translations: {
+						'fr': 'API',
+					},
 					items: [
 						'api/rest'
 					],
+				},
+				{
+					label: 'Rules',
+					translations: {
+						'fr': 'Règles',
+					},
+					autogenerate: { directory: 'rules' },
 				},
 			],
 		}),
