@@ -61,7 +61,7 @@ lors d'un événement en ligne ou hors-ligne.
 
 Les cas de comportements abusifs, harcelants ou tout autre comportement
 inacceptables peuvent être signalés aux dirigeant·e·s de la communauté responsables de l'application du code de conduite à
-[INSÉRER UNE ADRESSE EMAIL].
+<retraceur+enforcement@proton.me>.
 Toutes les plaintes seront examinées et feront l'objet d'une enquête rapide et équitable.
 
 Tou·te·s les dirigeant·e·s de la communauté sont tenu·e·s de respecter la vie privée et la sécurité des
