@@ -30,6 +30,13 @@ export default defineConfig({
 			},
 			sidebar: [
 				{
+					label: 'About',
+					translations: {
+						'fr': 'À propos',
+					},
+					link: '/about/',
+				},
+				{
 					label: 'Getting started',
 					translations: {
 						'fr': 'Premiers pas',
