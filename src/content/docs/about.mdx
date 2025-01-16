@@ -5,6 +5,18 @@ description: What the Retraceur Software is all about.
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 import { Aside } from '@astrojs/starlight/components';
+import { LinkButton } from '@astrojs/starlight/components';
+
+<div style="margin: 0 auto; width: fit-content;">
+    <LinkButton
+        href="https://github.com/retraceur/coeur/releases"
+        variant="primary"
+        icon="github"
+        iconPlacement="start"
+    >
+    Try Retraceur!
+    </LinkButton>
+</div>
 
 This **Personal Online Publication Hub** is a WordPress® **fork** I decided to build & maintain for [my use](https://imathi.eu) in reaction to the "Web" that Mr. Mullenweg has woven for 20 years and which has lately become untrustworthy.
 
@@ -38,8 +50,8 @@ To its core, Retraceur only kept what a **Personal Online Publication Hub** need
 Using Retraceur you get a twice lighter software setting you free from the WordPress® trademark and the wp-dot-org chains:
 
 - All links to the [wp-dot-org](https://w.org) network or distant API were removed from the source code.
-- All references to the WordPress®[^1] trademark were replaced by the "WP" or "Retraceur" terms or removed.
-- WordPress®[^1] logos were replaced by Retraceur ones.
+- All references to the WordPress® trademark were replaced by the "WP" or "Retraceur" terms or removed.
+- WordPress® logos were replaced by Retraceur ones.
 - The Gravatar service was replaced by the [Libravatar](https://www.libravatar.org/) one.
 - The WP Emojis fallback was replaced by using [OpenMojis](https://openmoji.org/).
 

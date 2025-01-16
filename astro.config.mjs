@@ -7,6 +7,7 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'Retraceur',
+			favicon: './src/assets/light-logo.svg',
 			defaultLocale: 'root',
 			locales: {
 				root: {
@@ -27,6 +28,7 @@ export default defineConfig({
 			},
 			social: {
 				github: 'https://github.com/retraceur',
+				blueSky: 'https://bsky.app/profile/retraceur.bsky.social',
 			},
 			sidebar: [
 				{
