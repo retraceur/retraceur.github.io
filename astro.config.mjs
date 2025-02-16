@@ -45,10 +45,19 @@ export default defineConfig({
 					autogenerate: { directory: 'getting-started' },
 				},
 				{
+					label: 'Managing your Website',
+					translations: {
+						'fr': 'Gérer votre site Web',
+					},
+					collapsed: true,
+					autogenerate: { directory: 'administration' },
+				},
+				{
 					label: 'API',
 					translations: {
 						'fr': 'API',
 					},
+					collapsed: true,
 					items: [
 						'api/rest'
 					],
@@ -58,6 +67,7 @@ export default defineConfig({
 					translations: {
 						'fr': 'Règles',
 					},
+					collapsed: true,
 					autogenerate: { directory: 'rules' },
 				},
 			],
