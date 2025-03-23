@@ -1,0 +1,59 @@
+---
+title: Installation d’un catalogue de langue
+description: Apprenez comment utiliser Retraceur dans différentes langues.
+sidebar:
+    order: 2
+---
+
+import { FileTree } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
+
+Voici les étapes que vous devrez suivre pour installer une version internationale de Retraceur.
+
+<Aside type="caution">Si vous faites une erreur dans une ou plusieurs des étapes ou si vous ne spécifiez pas la langue de votre site correctement, Retraceur affichera la version anglaise par défaut.</Aside>
+
+## Étape 1
+
+![Section des Assets de la page présentant une version de Retraceur](../../../../assets/images/languages-us-001.png)
+
+1. Parcourez l'étiquette [retraceur-language](https://github.com/topics/retraceur-language) sur GitHub pour trouver les fichiers de langues à utiliser sur votre site Retraceur.
+2. Téléchargez le catalogue de langue correspondant à votre version de Retraceur (récupérer l'archive `languages.zip` si fourrnie).
+
+## Étape 2
+
+Désarchiver le paquet Zip téléchargé et déplacer son contenu dans le répertoire  `wp-content/languages` de votre site Web. Vous devriez obtenir une arborescence de fichiers ressemblant à celle qui suit :
+
+<FileTree>
+
+- index.php
+- LICENSE.md
+- README.md
+- ...
+- wp-content/
+  - ...
+  - languages/
+   - admin-fr_FR.mo
+   - admin-fr_FR.po
+   - continents-cities-fr_FR.mo
+   - continents-cities-fr_FR.po
+   - fr_FR-0cc31205f20441b3df1d1b46100f6b8d.json
+   - ...
+   - fr_FR.mo
+   - fr_FR.po
+- ...
+
+</FileTree>
+
+<Aside>Si vous avez téléchargé une langue différente du français (`fr_FR`), les noms de vos fichiers de langue seront différents et utiliseront l’un de ces [codes de langue](../locales) dans leurs noms.</Aside>
+
+## Étape 3
+
+
+![Administration des réglages](../../../../assets/images/languages-us-002.png)
+
+1. Allez sur votre tableau de bord Retraceur.
+2. Ouvrez l'écran d'administration des réglages généraux de votre site, comme montré plus haut.
+3. Localisez l'option de la langue du site et sélectionner le code de langue du catalogue que vous venez d'installer.
+4. Naviguez jusqu'au bas de la page et confirmer votre choix en cliquant sur le bouton bleu « Enregistrer les modifications ».
+
+Votre site Web devrait désormais être traduit dans la langue que vous avez installée. Si ce n'est pas le cas: recommencez 😬.
