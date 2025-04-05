@@ -1,6 +1,8 @@
 ---
 title: Privacy policy
 description: Retraceur cares a lot about your privacy.
+sidebar:
+    order: 3
 ---
 
 In short: Retraceur does not collect any of your personal data, the GitHub services are & third party plugins or themes might!

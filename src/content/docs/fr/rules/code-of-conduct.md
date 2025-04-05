@@ -1,6 +1,8 @@
 ---
 title: Code de conduite
 description: Les règles qui s'appliquent à tout contributeur du projet.
+sidebar:
+    order: 1
 ---
 
 ## Notre engagement

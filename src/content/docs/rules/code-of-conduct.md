@@ -1,6 +1,8 @@
 ---
 title: Code of conduct
 description: These rules apply to every contributors to the project.
+sidebar:
+    order: 1
 ---
 
 ## Our Pledge

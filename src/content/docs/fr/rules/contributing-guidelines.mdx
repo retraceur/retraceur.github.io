@@ -1,0 +1,115 @@
+---
+title: Guide de contribution
+description: Explique comment un·e contributeur·rice peut s’engager dans le projet.
+sidebar:
+    order: 2
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+Tout d’abord, merci d’avoir pris le temps de contribuer ! ❤️
+
+Toutes les contributions sont encouragées et appréciées. Vous trouverez ci-dessous différentes manières de contribuer et des informations sur comment le projet gère ces contributions. Merci de lire attentivement la section appropriée avant de contribuer. Cela facilitera grandement la tâche des mainteneur·euse·s et facilitera l'expérience de tou·te·s. La communauté attend vos contributions avec impatience. 🎉
+
+<Aside type="tip">
+Et si le projet vous plaît, mais que vous manquez de temps pour y contribuer, pas de problème. Il existe d'autres moyens simples de soutenir le projet et de témoigner votre reconnaissance, et nous serions ravis que vous :
+- Starisiez le projet [GitHub](https://github.com/retraceur/coeur/)
+- Partagiez via Bluesky à son propos
+- Fassiez référence au projet depuis le fichier readme du vôtre
+- Parliez du projet à des rencontres locales ou à vos ami·e·s/collègues
+</Aside>
+
+## Code de conduite
+
+Ce projet et tou·te·s ceux·elles qui y participent sont régis par le [code de conduite Retraceur](../code-of-conduct).
+En participant, vous êtes tenu·e de respecter ce code. Merci de signaler tout comportement inacceptable à &lt;retraceur+enforcement@proton.me&gt;.
+
+## J'ai une question
+
+<Aside type="note">
+    Si vous souhaitez poser une question, nous partons du principe que vous avez lu la documentation du logiciel.
+</Aside>
+
+Avant de poser une question, il est préférable de rechercher parmi les [rapports d'anomalie](https://github.com/retraceur/coeur/issues) existants ceux qui sont susceptibles de vous aider. Si vous avez trouvé un problème pertinent et que vous avez besoin de précisions, vous pouvez créer le rapport d'anomalie et y inscrire votre question. Il est également conseillé de rechercher d'abord des réponses sur Internet.
+
+Si vous ressentez encore le besoin de poser une question et avez besoin de précisions, nous vous recommandons de procéder comme suit :
+
+- Créer un [rapport d'anomalie](https://github.com/retraceur/coeur/issues/new).
+- Fournissez autant de contexte que possible sur la situation à laquelle vous êtes confronté·e.
+- Indiquez les versions du projet et de la plateforme (PHP, MySQL ou MariaDB, etc.), selon ce qui vous semble pertinent.
+
+Nous traiterons votre rapport dans les plus brefs délais.
+
+## Je veux contribuer
+
+<Aside type="caution">
+    Lorsque vous contribuez à ce projet, vous devez vous assurer que vous êtes l'auteur de 100% du contenu, que vous disposez des droits nécessaires sur le contenu et que le contenu auquel vous contribuez peut être fourni sous la licence du projet.
+</Aside>
+
+### Rapporter une anomalie
+
+#### Avant de soumettre un rapport d'anomalie
+
+Un bon rapport d'anomalie ne devrait pas obliger à solliciter des informations supplémentaires. Nous vous demandons donc d'investiguer attentivement, de rassembler toutes les informations utiles et de décrire le problème en détail dans votre rapport. Merci de commencer par accomplir les étapes suivantes pour nous aider à corriger toute anomalie potentielle au plus vite.
+
+- Assurez vous d'utiliser la dernière version de l'application.
+- Vérifiez que l'anomalie concerne réellement l'application et qu'il ne s'agit pas d'une erreur liée à vos personnalisations comme par exemple lorsque votre configuration génère un conflit dû à une combinaison inadaptée d'extensions/thème ou de versions incompatibles (Assurez vous que la solution ne soit pas disponible dans la [documentation](https://retraceur.github.io/). Si vous recherchez de l'assistance, [cette section](#jai-une-question) peut vous intéresser).
+- Pour voir si d'autres utilisateurs ont rencontré (et potentiellement déjà résolu) le même problème que vous, vérifiez s'il n'existe pas déjà un rapport pour votre anomalie dans l’[outil de suivi des anomalies](https://github.com/retraceur/coeur/issues?q=label%3Abug).
+- Collecter les informations relatives à votre anomalie :
+  - l'entrée pertinente du journal des erreurs de votre serveur,
+  - les versions de PHP, MySQL ou MariaDB, le nom de votre navigateur Web en fonction de ce qui vous semble approprié,
+  - potentiellement ce que vous avez requêté et reçu,
+  - les étapes pour reproduire l'anomalie dans la version actuelle de l'application et la vérification de sa présence dans des versions précédentes.
+
+#### Comment soumettre un bon rapport d'anomalie?
+
+<Aside type="danger">
+    Vous ne devez jamais signaler de problèmes de sécurité, des vulnérabilités ou des anomalies comprennant des informations sensibles à partir de l'outil de suivi des anomalies ou de tout autre endroit public. Les anomalies sensibles doivent être envoyées par e-mail à &lt;retraceur+security@proton.me&gt;.
+</Aside>
+
+Nous utilisons les tickets GitHub pour suivre les anomalies et les erreurs. Si vous rencontrez un problème avec le projet :
+
+- Ouvrez un [ticket](https://github.com/retraceur/coeur/issues/new) (comme nous ne pouvons pas encore déterminer s'il s'agit vraiment d'un bogue, nous vous demandons de ne pas l'étiqueter en tant que tel).
+- Expliquez le comportement attendu et le comportement constaté.
+- Veuillez fournir autant de contexte que possible et décrire les *étapes de reproduction* à suivre pour regénérer l'anomalie. Cela inclut généralement votre code. Pour des rapports d'anomalie efficaces, isolez le problème et créez un cas de test réduit.
+- Renseignez les informations collectées dans la section précédente.
+
+Une fois le problème signalé :
+
+- L’équipe du projet étiquettera le problème en conséquence.
+- Un membre de l’équipe tentera de reproduire le problème en suivant les étapes que vous avez fournies. S’il n’existe aucune étape de reproduction ou aucun moyen évident de reproduire le problème, l’équipe vous demandera ces étapes et marquera le problème comme nécessitant des informations de reproduction `needs-repro`. Les anomalies ainsi identifiées ne seront pas traitées tant que des informations n'auront pas été fournies.
+- Si l’équipe parvient à reproduire le problème, il sera marqué comme nécessitant une correction `needs-fix`, avec éventuellement d’autres étiquettes (comme `critical`), et la résolution du problème sera assignée.
+
+### Suggérer des évolutions
+
+Cette section vous explique comment soumettre une suggestion d'amélioration pour Retraceur, **ce qui inclut des fonctionnalités entièrement nouvelles et des améliorations mineures des fonctionnalités existantes**. Suivre ces instructions aidera les mainteneur·euse·s et la communauté à comprendre votre suggestion et à identifier celles qui sont pertinentes.
+
+#### Avant de proposer une évolution
+
+- Assurez vous d'utiliser la dernière version de l'application.
+- Consultez attentivement la [documentation](https://retraceur.github.io/) pour vérifier que votre suggestion n'est pas déjà couverte par une fonctionnalité existante.
+- Effectuez une [recherche](https://github.com/retraceur/coeur/issues?q=label%3Aenhancement) dans les suggestions existantes pour voir si la vôtre n’a pas déjà été suggérée. Si tel est le cas, ajouter vos remarques en commentaire à cette suggestion plutôt que d'en créér une nouvelle.
+- Vérifiez si votre idée correspond à la portée et aux objectifs du projet. À vous de présenter un argumentaire convaincant pour démontrer aux développeur·euse·s le bien-fondé de cette fonctionnalité. Gardez à l'esprit que nous souhaitons des fonctionnalités utiles à la majorité de nos utilisateur·rice·s, et non à un petit groupe. Si vous ne ciblez qu'une minorité d'utilisateur·rice·s, envisagez de la développer sous la forme d'une extension de Retraceur.
+
+#### Comment soumettre une bonne suggestion?
+
+Les suggestions sont suivies à l'aide de tickets [GitHub](https://github.com/retraceur/coeur/issues).
+
+- Utilisez un **titre clair et précis** pour le ticket décrivant votre suggestion.
+- Fournissez une **description détaillée de votre suggestion** de la manière la plus circonstanciée possible.
+- **Décrivez le comportement actuel** et **expliquez le comportement que vous attendez à la place** et pourquoi. À ce stade, vous pouvez également déterminer les alternatives qui ne fonctionnent pas pour vous.
+- Vous pouvez inclure des captures d'écran ou des enregistrements d'écran pour illustrer les étapes de votre suggestion ou indiquer la fonctionnalité à laquelle se rapporte la suggestion. Vous pouvez utiliser [LICEcap](https://www.cockos.com/licecap/) pour enregistrer des GIF sous macOS et Windows, ainsi que l'enregistreur d'écran intégré à [GNOME](https://help.gnome.org/users/gnome-help/stable/screen-shot-record.html.en) ou [SimpleScreenRecorder](https://github.com/MaartenBaert/ssr) sous Linux.
+- **Expliquez pourquoi cette amélioration serait utile** à la plupart des utilisateur·rice·s de Retraceur. Vous pouvez également nous indiquer les autres projets qui ont implémenté votre solution et qui pourraient nous inspirer.
+
+### Proposer des Patches
+
+Si vous savez comment modifier le code pour résoudre une anomalie ou faire évoluer une fonctionnalité, vous pouvez soumettre votre patch en faisant une [demande de tirage sur GitHub](https://github.com/retraceur/coeur/pulls).
+
+### Améliorer la documentation
+
+La documentation de Retraceur est gérée depuis ce dépôt : [github.com/retraceur/retraceur.github.io](https://github.com/retraceur/retraceur.github.io). Si vous avez des connaissances de base en Markdown, vous serez à l'aise pour rédiger d'excellentes ressources de documentation. Le processus de contribution à la documentation est assez similaire à celui de la contribution au code. Vous pouvez signaler des [anomalies](https://github.com/retraceur/retraceur.github.io/issues) et/ou suggérer des [améliorations](https://github.com/retraceur/retraceur.github.io/pulls). 
+
+
+## Attribution
+
+Ce guide a été élaboré à l'aide de [contributing.md](https://contributing.md/generator)!

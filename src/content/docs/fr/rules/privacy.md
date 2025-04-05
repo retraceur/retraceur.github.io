@@ -1,6 +1,8 @@
 ---
 title: Politique de confidentialité
 description: Retraceur se soucie beaucoup du respect de votre vie privée.
+sidebar:
+    order: 3
 ---
 
 En bref : Retraceur ne collecte aucune de vos données personnelles. Les services de GitHub le font et les extensions ou thèmes tiers pourraient le faire !
