@@ -20,7 +20,7 @@ It is extremely important to back up your database before beginning the upgrade.
 
 ## Step 2: Back up some of your Website important files
 
-Using a FTP software such as [FileZilla](https://filezilla-project.org/), make sure to download the `/wp-content` directory as well as the `wp-config.php` & `.htaccess` files of your website inside a specific folder of your local computer. Once you downloaded these files, open the folder within a text editor to check you can read the content of the `wp-config.php` file & browse into the `/wp-content` subdirectories.
+Using a FTP software such as [FileZilla](https://filezilla-project.org/), make sure to download the `/wp-content` directory as well as the `wp-config.php` & `.htaccess` files of your Website inside a specific folder of your local computer. Once you downloaded these files, open the folder within a text editor to check you can read the content of the `wp-config.php` file & browse into the `/wp-content` subdirectories.
 
 ## Step 3: Deactivate ALL your Plugins and Blocks
 
@@ -53,7 +53,7 @@ Delete all files but the `/wp-content` directory and the `wp-config.php` & `.hta
 
 ## Step 6: Upload the new files
 
-Using a FTP Software such as [FileZilla](https://filezilla-project.org/), copy all files and folders except the `/wp-content` directory of the new Retraceur version you downloaded at Step 4 (from the extracted `retraceur` folder) to paste them at the root level of your Website files tree. Once done, copy the `/wp-content/themes/point` folder from the extracted new version package into the `/wp-content/themes` directory of your website. Your Website files tree should now look like:
+Using a FTP Software such as [FileZilla](https://filezilla-project.org/), copy all files and folders except the `/wp-content` directory of the new Retraceur version you downloaded at Step 4 (from the extracted `retraceur` folder) to paste them at the root level of your Website files tree. Once done, copy the `/wp-content/themes/point` folder from the extracted new version package into the `/wp-content/themes` directory of your Website. Your Website files tree should now look like:
 
 <FileTree>
 
@@ -83,11 +83,11 @@ Using a FTP Software such as [FileZilla](https://filezilla-project.org/), copy a
 
 ## Step 7: Run the Retraceur upgrade script
 
-Using a web browser, go to your Retraceur Dashboard at the normal `https://site.url/wp-admin` location. Retraceur will check to see if a database upgrade is necessary, and if it is, it will give you a new link to follow.
+Using a Web browser, go to your Retraceur Dashboard at the normal `https://site.url/wp-admin` location. Retraceur will check to see if a database upgrade is necessary, and if it is, it will give you a new link to follow.
 
 This link will lead you to run the Retraceur upgrade script by accessing `wp-admin/upgrade.php`. Follow the instructions presented on your screen.
 
-## Step 8: Install updated Plugins and Themes
+## Step 8: Install updated Plugins, Blocks and Themes
 
 Make sure to visit individual plugin, block and theme pages and look for the compatibility information with your new Retraceur version. Install new versions of your plugins, blocks and themes, if necessary.
 
