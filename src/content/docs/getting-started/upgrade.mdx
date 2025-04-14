@@ -35,9 +35,19 @@ Go to the Plugins screen of your Retraceur Dashboard, select all your installed 
 
 Go to the Retraceur's Core latest [release page on GitHub](https://github.com/retraceur/coeur/releases) and from the Assets section, download the `retraceur.zip` archive and unzip it on your local computer. The Retraceur package will be extracted into a folder called `retraceur`.
 
+<Aside type="note" title="Retraceur translations">
+  If you are using a translated version of Retraceur, make sure to also download and extract the latest version of your language catalog. For instance Retraceur provides a french language catalog from this [GitHub repository](https://github.com/retraceur/fr-fr). The Retraceur french language catalog will be extracted into a folder called `fr-fr-{version}`.
+</Aside>
+
 ## Step 5: Delete the old Retraceur files of your Website
 
-Delete all files but the `/wp-content` directory and the `wp-config.php` & `.htaccess` files. Once done, delete the `/wp-content/themes/point` directory which contains the default Retraceur theme that is bundled inside Retraceur. Your Website files tree should look like:
+Delete all files but the `/wp-content` directory and the `wp-config.php` & `.htaccess` files. Once done, delete the `/wp-content/themes/point` directory which contains the default Retraceur theme that is bundled inside Retraceur.
+
+<Aside type="note" title="Retraceur translations">
+  If you are using a translated version of Retraceur, inside the `/wp-content/languages` directory: remove all files making sure to keep the potential `/wp-content/languages/plugins` and `/wp-content/languages/themes` folders.
+</Aside>
+
+Your Website files tree should look like:
 
 <FileTree>
 
@@ -45,6 +55,9 @@ Delete all files but the `/wp-content` directory and the `wp-config.php` & `.hta
 - wp-config.php
 - wp-content/
   - index.php
+  - languages/
+    - plugins/
+    - themes/ 
   - plugins/
   - themes/
   - uploads/
@@ -53,7 +66,13 @@ Delete all files but the `/wp-content` directory and the `wp-config.php` & `.hta
 
 ## Step 6: Upload the new files
 
-Using a FTP Software such as [FileZilla](https://filezilla-project.org/), copy all files and folders except the `/wp-content` directory of the new Retraceur version you downloaded at Step 4 (from the extracted `retraceur` folder) to paste them at the root level of your Website files tree. Once done, copy the `/wp-content/themes/point` folder from the extracted new version package into the `/wp-content/themes` directory of your Website. Your Website files tree should now look like:
+Using a FTP Software such as [FileZilla](https://filezilla-project.org/), copy all files and folders except the `/wp-content` directory of the new Retraceur version you downloaded at Step 4 (from the extracted `retraceur` folder) to paste them at the root level of your Website files tree. Once done, copy the `/wp-content/themes/point` folder from the extracted new version package into the `/wp-content/themes` directory of your Website.
+
+<Aside type="note" title="Retraceur translations">
+  If you are using a translated version of Retraceur, copy all files contained into your language catalog extracted folder inside the `/wp-content/languages` directory. In the below files tree, the `/wp-content/languages` directory showes what to expect when using the french language catalog.
+</Aside>
+
+Your Website files tree should now look like:
 
 <FileTree>
 
@@ -69,6 +88,17 @@ Using a FTP Software such as [FileZilla](https://filezilla-project.org/), copy a
 - wp-config.php
 - wp-content/
   - index.php
+  - languages/
+    - plugins/
+    - themes/
+    - admin-fr_FR.mo
+    - admin-fr_FR.po
+    - continents-cities-fr_FR.mo
+    - continents-cities-fr_FR.po
+    - fr_FR-0cc31205f20441b3df1d1b46100f6b8d.json
+    - ...
+    - fr_FR.mo
+    - fr_FR.po
   - plugins/
   - themes/
     - point/
@@ -90,6 +120,10 @@ This link will lead you to run the Retraceur upgrade script by accessing `wp-adm
 ## Step 8: Install updated Plugins, Blocks and Themes
 
 Make sure to visit individual plugin, block and theme pages and look for the compatibility information with your new Retraceur version. Install new versions of your plugins, blocks and themes, if necessary.
+
+<Aside type="note" title="Retraceur translations">
+  If you are using a translated version of Retraceur, you'll probably also need to download and extract language catalogs for your installed plugins, blocks and themes. The content of these extracted folders will need to be copied inside the `/wp-content/languages/plugins` for your installed plugins & blocks and inside the `/wp-content/languages/themes` for your themes.
+</Aside>
 
 ## Step 9: Reactivate Plugins & Blocks
 

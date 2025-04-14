@@ -35,9 +35,19 @@ Allez dans la zone de gestion des extensions de votre tableau de bord Retraceur,
 
 Ouvrez la page de la version la plus récente de la liste des versions de Retraceur sur [GitHub](https://github.com/retraceur/coeur/releases). Depuis la section « Assets », téléchargez le fichier `retraceur-fr_FR.zip` et décompressez-le sur votre ordinateur local. Les fichiers de Retraceur seront extraits dans un dossier qui s'appellera `retraceur-fr_FR`.
 
+<Aside type="note" title="Traduction de Retraceur">
+  Si vous utilisez Retraceur dans sa version française, assurez-vous d'également télécharger et extraire le catalogue de langue française que Retraceur fournit dans ce [dépôt GitHub](https://github.com/retraceur/fr-fr). Ce catalogue de langue sera extrait dans un dossier s'appelant `fr-fr-{version}`.
+</Aside>
+
 ## Step 5: Enlevez les fichiers de Retraceur périmés de votre site Web
 
-Supprimez tous les fichiers sauf le répertoire `/wp-content` et les fichiers `wp-config.php` & `.htaccess`. Supprimez ensuite le répertoire `/wp-content/themes/point` : il contient le thème par défaut de Retraceur qui est inclus dans la nouvelle version de Retraceur. L'arborescence des fichiers de votre site Web devrait ressembler à ceci :
+Supprimez tous les fichiers sauf le répertoire `/wp-content` et les fichiers `wp-config.php` & `.htaccess`. Supprimez ensuite le répertoire `/wp-content/themes/point` : il contient le thème par défaut de Retraceur qui est inclus dans la nouvelle version de Retraceur.
+
+<Aside type="note" title="Traduction de Retraceur">
+  Si vous utilisez Retraceur dans sa version française, dans le répertoire `/wp-content/languages` de votre site Web: retirez tous les fichiers de langue à l'exception des dossiers `/wp-content/languages/plugins` et `/wp-content/languages/themes`.
+</Aside>
+
+L'arborescence des fichiers de votre site Web devrait ressembler à ceci :
 
 <FileTree>
 
@@ -45,6 +55,9 @@ Supprimez tous les fichiers sauf le répertoire `/wp-content` et les fichiers `w
 - wp-config.php
 - wp-content/
   - index.php
+  - languages/
+    - plugins/
+    - themes/
   - plugins/
   - themes/
   - uploads/
@@ -53,7 +66,13 @@ Supprimez tous les fichiers sauf le répertoire `/wp-content` et les fichiers `w
 
 ## Step 6: Chargez les nouveaux fichiers
 
-En utilisant un logiciel FTP tel que [FileZilla](https://filezilla-project.org/), copiez tous les fichiers et dossiers à l'exception du répertoire `/wp-content` de la nouvelle version de Retraceur contenue dans le dossier `retraceur-fr_FR` de l'étape 4 et coller les au niveau de la racine de l'arborescence des fichiers de votre site Web. Ensuite, copiez le dossier `/wp-content/themes/point` contenu dans le répertoire local  `retraceur-fr_FR` et collez le dans le répertoire `/wp-content/themes` de votre site Web. L'arborescence des fichiers de votre site Web devrait maintenant ressembler à ce qui suit :
+En utilisant un logiciel FTP tel que [FileZilla](https://filezilla-project.org/), copiez tous les fichiers et dossiers à l'exception du répertoire `/wp-content` de la nouvelle version de Retraceur contenue dans le dossier `retraceur-fr_FR` de l'étape 4 et coller les au niveau de la racine de l'arborescence des fichiers de votre site Web. Ensuite, copiez le dossier `/wp-content/themes/point` contenu dans le répertoire local  `retraceur-fr_FR` et collez le dans le répertoire `/wp-content/themes` de votre site Web.
+
+<Aside type="note" title="Traduction de Retraceur">
+  Si vous utilisez Retraceur dans sa version française, copiez tous les fichiers contenus dans le dossier extrait (`fr-fr-{version}`) pour votre catalogue de langue française dans le répertoire `/wp-content/languages`. Dans l'arborescence ci-dessous, le répertoire `/wp-content/languages` montre à quoi vous attendre dans le cas d'une mise à jour du catalogue de langue française.
+</Aside>
+
+L'arborescence des fichiers de votre site Web devrait maintenant ressembler à ce qui suit :
 
 <FileTree>
 
@@ -69,6 +88,17 @@ En utilisant un logiciel FTP tel que [FileZilla](https://filezilla-project.org/)
 - wp-config.php
 - wp-content/
   - index.php
+  - languages/
+    - plugins/
+    - themes/
+    - admin-fr_FR.mo
+    - admin-fr_FR.po
+    - continents-cities-fr_FR.mo
+    - continents-cities-fr_FR.po
+    - fr_FR-0cc31205f20441b3df1d1b46100f6b8d.json
+    - ...
+    - fr_FR.mo
+    - fr_FR.po
   - plugins/
   - themes/
     - point/
@@ -90,6 +120,10 @@ Ce lien vous fera ouvrir la page `wp-admin/upgrade.php` pour exécuter le script
 ## Step 8: Installez les versions des extensions, blocs et thèmes les plus récentes
 
 Veillez à visiter les pages Web de chaque extension, bloc et thème et recherchez les informations relatives à la compatibilité avec votre nouvelle version de Retraceur. Installez de nouvelles versions de vos extensions, blocs et thèmes, si nécessaire.
+
+<Aside type="note" title="Traduction de Retraceur">
+  Si vous utilisez Retraceur dans sa version française, vous aurez probablement besoin d'également télécharger et extraire les catalogues de langue française pour vos extensions, blocs et thèmes installés. Le contenu de ces dossiers de catalogue extraits seront à copier dans le répertoire `/wp-content/languages/plugins` pour vos extensions et blocs installés et dans le dossier `/wp-content/languages/themes` pour vos thèmes.
+</Aside>
 
 ## Step 9: Réactivez les extensions et les blocs
 
