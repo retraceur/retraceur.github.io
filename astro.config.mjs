@@ -25,10 +25,10 @@ export default defineConfig({
 				light: './src/assets/light-logo.svg',
 				dark: './src/assets/dark-logo.svg',
 			},
-			social: {
-				github: 'https://github.com/retraceur',
-				blueSky: 'https://bsky.app/profile/retraceur.bsky.social',
-			},
+			social: [
+				{ icon: 'github', label: 'GitHub', href: 'https://github.com/retraceur' },
+				{ icon: 'blueSky', label: 'blueSky', href: 'https://bsky.app/profile/retraceur.bsky.social' },
+			],
 			sidebar: [
 				{
 					label: 'About',
