@@ -19,7 +19,7 @@ Par défaut, cette page affiche 3 "widgets" de tableau de bord :
 
 ## Administration des articles
 
-À compléter
+Cette zone d'administration vous permet de gérer l'essentiel de vos publications: la rédaction des articles ainsi que la définition des catégories, étiquettes, et [formats d'article](./manage-post-formats).
 
 ## Administration des médias
 
@@ -39,7 +39,7 @@ Par défaut, cette page affiche 3 "widgets" de tableau de bord :
 
 ## Gestions des blocs
 
-À compléter
+Cette zone d'administration vous permet de gérer vos [blocks](./manage-blocks) : leur installation et leur activation.
 
 ## Gestions des utilisateur·ice·s
 
