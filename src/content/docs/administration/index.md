@@ -19,7 +19,7 @@ By default this page shows 3 Dashboard widgets:
 
 ## Posts Administration
 
-TBD
+This administration area allows you to manage the core of your content: writing posts, defining post categories, post tags & [post formats](./manage-post-formats).
 
 ## Media Administration
 
@@ -39,7 +39,7 @@ TBD
 
 ## Blocks management
 
-TBD
+This administration area allows you to manage [blocks](./manage-blocks): their installation & their activation.
 
 ## Users management
 
