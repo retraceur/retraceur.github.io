@@ -5,7 +5,7 @@ sidebar:
     order: 3
 ---
 
-La fonctionnalité des formats d'article est contrôlée par le thème actif de votre site. L'interface d'administration décrite par la suite s'affichera uniquement si votre thème a déclaré sa prise en charge de cette fonctionnalité dans son fichier `functions.php`. Retraceur propose une list de 11 formats d'article: `aside`, `audio`, `chat`, `code`, `gallery`, `image`, `link`, `quote`, `status`, `video` et `standard` (qui est le format par défaut). Un thème Retraceur peut "consentir" à supporter 1 ou plusieurs formats d'article à l'aide de son fichier `functions.php`. Par exemple le thème "Point" (qui est celui fournit par défaut dans Retraceur) prend en charge 4 formats d'article: `link`, `status`, `image`, `quote` (le format `standard` est toujours inclu à partir du moment où le thème a consenti à prendre en charge des formats d'articles). Si vous parcourez le code du [fichier `functions.php`](https://github.com/retraceur/coeur/blob/trunk/wp-content/themes/point/functions.php#L21) du thème "Point", vous découvrirez comment cette prise en charge est effectuée :
+La fonctionnalité des formats d'article est contrôlée par le thème actif de votre site. L'interface d'administration décrite par la suite s'affichera uniquement si votre thème a déclaré sa prise en charge de cette fonctionnalité dans son fichier `functions.php`. Retraceur propose une liste de 11 formats d'article: `aside`, `audio`, `chat`, `code`, `gallery`, `image`, `link`, `quote`, `status`, `video` et `standard` (qui est le format par défaut). Un thème Retraceur peut "consentir" à supporter 1 ou plusieurs formats d'article à l'aide de son fichier `functions.php`. Par exemple le thème "Point" (qui est celui fournit par défaut dans Retraceur) prend en charge 4 formats d'article: `link`, `status`, `image`, `quote` (le format `standard` est toujours inclus à partir du moment où le thème a consenti à prendre en charge des formats d'articles). Si vous parcourez le code du [fichier `functions.php`](https://github.com/retraceur/coeur/blob/trunk/wp-content/themes/point/functions.php#L21) du thème "Point", vous découvrirez comment cette prise en charge est effectuée :
 
 ```php
 // Utilisation de formats d'article spécifiques.
@@ -20,7 +20,7 @@ En dehors du format `standard` qui résulte d'une rédaction/composition élabor
 - `aside` : Les thèmes devraient n'afficher que du texte brut.
 - `audio` : Les thèmes devraient n'afficher qu'un lecteur pour permettre aux visiteur·euse·s d'écouter le contenu audio.
 - `chat` : Les thèmes devraient n'afficher que la transcription d'une conversation.
-- `code` : Les thèmes devraient n'afficher que le code mise en forme grâce à la coloration syntaxique et des numéros de ligne.
+- `code` : Les thèmes devraient n'afficher que le code mis en forme grâce à la coloration syntaxique et des numéros de ligne.
 - `gallery` : Les thèmes devraient n'afficher qu'une liste organisée de fichiers d'image.
 - `image` : Les thèmes devraient n'afficher qu'une photo, un tableau (peinture).
 - `link` : Les thèmes devraient n'afficher qu'un lien vers un autre site.

@@ -5,7 +5,7 @@ sidebar:
     order: 3
 ---
 
-Post Formats is a feature controlled by your Retraceur active theme. The following Administration UI will only show if this theme has declared its support of the feature within their `functions.php` file. The Retraceur software offers a list of 11 Post Formats: `aside`, `audio`, `chat`, `code`, `gallery`, `image`, `link`, `quote`, `status`, `video` & `standard` (which is the default post format). A Retraceur theme can "opt-in" to support 1 or more Post Formats from its `functions.php` file. For instance the "Point" theme (which is the default Retraceur theme) supports 4 post formats: `link`, `status`, `image`, `quote` (the `standard` post format is always included as soon as a theme opted-in for the Post Formats feature). If you browse the "Point" [`functions.php` file](https://github.com/retraceur/coeur/blob/trunk/wp-content/themes/point/functions.php#L21), you'll see how this support is declared:
+Post Formats is a feature controlled by your Retraceur active theme. The following Administration UI will only show if this theme has declared its support of the feature within its `functions.php` file. The Retraceur software offers a list of 11 Post Formats: `aside`, `audio`, `chat`, `code`, `gallery`, `image`, `link`, `quote`, `status`, `video` & `standard` (which is the default post format). A Retraceur theme can "opt-in" to support 1 or more Post Formats from its `functions.php` file. For instance the "Point" theme (which is the default Retraceur theme) supports 4 Post Formats: `link`, `status`, `image`, `quote` (the `standard` Post Format is always included as soon as a theme opted-in for the Post Formats feature). If you browse the "Point" [`functions.php` file](https://github.com/retraceur/coeur/blob/trunk/wp-content/themes/point/functions.php#L21), you'll see how this support is declared:
 
 ```php
 // Use specific Post Formats.
@@ -17,16 +17,16 @@ Apart from the `standard` Post Format which is the result of an elaborate writin
 ## Post Formats detailed list
 
 - `standard`: **it's the default Post Format**. Themes are usually displaying the post title, its content and some other attributes such as its author, its publication date, etc...
-- `aside`: themes should display the raw text.
-- `audio`: themes should display a player to let visitors listen to the audio content.
-- `chat`: themes should display a conversation transcript.
-- `code`: themes should display code with syntax highlighting & line numbers.
-- `gallery`: themes should display an organized list of image files.
-- `image`: themes should display a single photo, painting.
-- `link`: themes should display a link to another site.
-- `quote`: themes should display the quotation & its author.                                  
-- `status`: themes should display a status update a bit like the short messages you post on social media.
-- `video`: themes should display a player to let visitors watch video content.
+- `aside`: themes should only display the raw text.
+- `audio`: themes should only display a player to let visitors listen to the audio content.
+- `chat`: themes should only display a conversation transcript.
+- `code`: themes should only display code with syntax highlighting & line numbers.
+- `gallery`: themes should only display an organized list of image files.
+- `image`: themes should only display a single photo, painting.
+- `link`: themes should only display a link to another site.
+- `quote`: themes should only display the quotation & its author.                                  
+- `status`: themes should only display a status update a bit like the short messages you post on social media.
+- `video`: themes should only display a player to let visitors watch video content.
 
 ## Post Formats Administration screen
 

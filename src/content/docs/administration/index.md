@@ -19,7 +19,7 @@ By default this page shows 3 Dashboard widgets:
 
 ## Posts Administration
 
-This administration area allows you to manage the core of your content: writing posts, defining post categories, post tags, and [post formats](./manage-post-formats).
+This administration area allows you to manage the core of your content: writing posts, defining post categories, post tags & [post formats](./manage-post-formats).
 
 ## Media Administration
 

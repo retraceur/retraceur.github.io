@@ -19,7 +19,7 @@ Par défaut, cette page affiche 3 "widgets" de tableau de bord :
 
 ## Administration des articles
 
-Cette zone d'administration vous permet de gérer l'essentiel de vos publications: la rédaction des articles ainsi que la définition des catégories, étiquettes, et [formats d'article](./manage-post-formats).
+Cette zone d'administration vous permet de gérer l'essentiel de vos publications: la rédaction des articles ainsi que la définition des catégories, étiquettes et [formats d'article](./manage-post-formats).
 
 ## Administration des médias
 
