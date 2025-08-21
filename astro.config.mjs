@@ -8,6 +8,15 @@ export default defineConfig({
 		starlight({
 			title: 'Retraceur',
 			defaultLocale: 'root',
+			head: [
+				{
+					tag: 'meta',
+					attrs: {
+						property: 'og:image',
+						content: 'https://wsrv.nl/?url=https://raw.githubusercontent.com/retraceur/retraceur.github.io/refs/heads/main/src/assets/images/retraceur-docs-open-graph.png',
+					},
+				},
+			],
 			locales: {
 				root: {
 					label: 'English',
