@@ -13,7 +13,7 @@ export default defineConfig({
 					tag: 'meta',
 					attrs: {
 						property: 'og:image',
-						content: 'https://wsrv.nl/?url=https://raw.githubusercontent.com/retraceur/retraceur.github.io/refs/heads/main/src/assets/images/retraceur-docs-open-graph.png',
+						content: 'https://wsrv.nl/?url=https://raw.githubusercontent.com/retraceur/retraceur.github.io/refs/heads/main/src/assets/retraceur-docs-og.png',
 					},
 				},
 			],
