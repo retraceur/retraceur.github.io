@@ -2,7 +2,7 @@
 title: Manage blocks
 description: This guide is explaining how to install, activate, update, deactivate and delete Retraceur Blocks.
 sidebar:
-    order: 4
+    order: 5
 ---
 
 Although Blocks are packaged like Plugins, Retraceur chose to separate their administration from the Plugins one. Please note, all installed blocks will be saved as subdirectories of the `/wp-content/plugins` directory and are managed just like plugins during the Retraceur loading process. Having a specific administration area just helps you directly and clearly figure out where you can manage the blocks you'll manipulate from the Site Editor or the Content Editor.

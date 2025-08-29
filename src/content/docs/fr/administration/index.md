@@ -31,7 +31,7 @@ Cette zone d'administration vous permet de gérer l'essentiel de vos publication
 
 ## Gestion de l'apparence
 
-À compléter
+C'est ici que vous managez vos thèmes (installation & activation), c'est aussi l'endroit où vous pouvez [ajuster l'atmosphère du thème](./edit-theme) que vous avez activé sur votre site.
 
 ## Gestion des extensions
 

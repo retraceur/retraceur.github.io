@@ -31,7 +31,7 @@ TBD
 
 ## Appearance management
 
-TBD
+This is the place where you manage themes (installation & activation) as well as where you [adjust the look and feel of the theme](./edit-theme) you activated on your site.
 
 ## Plugins management
 
