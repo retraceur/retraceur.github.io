@@ -1,0 +1,70 @@
+---
+title: Supporting Post Formats
+description: This guide explains the steps you need to perform to make your theme support Post Formats and provide specific layouts for the supported ones.
+sidebar:
+    order: 2
+---
+
+import { Code } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
+
+export const postFormatOptIn = `/**
+ * Set up Post Formats support.
+ */
+function your_theme_setup() {
+
+  // Opting in Post Formats.
+  add_theme_support( 'post-formats', array( 'link', 'status', 'image' ) );
+}
+add_action( 'after_setup_theme', 'your_theme_setup' );
+`;
+export const fileName = 'functions.php';
+export const highlights = `add_theme_support( 'post-formats', array( 'link', 'status', 'image' ) );`;
+export const postFormatBlockTemplate = `
+<!-- wp:query -->
+  <!-- wp:post-template -->
+    <!-- wp:post-format-part {"include":"standard"} -->
+      <!-- wp:post-title {"isLink":true,"level":2} /-->
+    <!-- /wp:post-format-part -->
+    <!-- wp:post-format-part {"include":"image"} -->
+      <!-- wp:post-format-name {"isLink":true,"level":2,"outputId":true} /-->
+    <!-- /wp:post-format-part -->
+  <!-- /wp:post-template -->
+<!-- /wp:query -->
+`;
+export const fileName2 = 'index.html';
+export const highlights2 = ['<!-- wp:post-format-part {"include":"standard"} -->', '<!-- /wp:post-format-part -->', '<!-- wp:post-format-part {"include":"image"} -->'];
+
+The Retraceur software offers a list of 11 Post Formats: `aside`, `audio`, `chat`, `code`, `gallery`, `image`, `link`, `quote`, `status`, `video` & `standard` (which is the default post format). A Retraceur theme can "opt-in" to support 1 or more Post Formats from its `functions.php` file. For instance the ["Point"](https://github.com/retraceur/coeur/blob/trunk/wp-content/themes/point/functions.php#L21) theme (which is the default Retraceur theme) supports 4 Post Formats: `link`, `status`, `image`, `quote` (the `standard` Post Format is always included as soon as a theme opted-in for the Post Formats feature).
+
+## Opting in Post Formats
+
+If it doesn't already exists, add a `functions.php` file into your theme's folder to put the following code in it (don't forget to eventually add the PHP opening tag at the top of your file!).
+
+<Code code={postFormatOptIn} lang="php" title={fileName} mark={highlights} />
+
+The boxed code indicates that the theme supports 3 post formats and the next time Retraceur displays the site dashboard, this code will generate the [Post Formats administration screen](../../administration/manage-post-formats) to allow site administrators to customize the name, description and URL portion of each of the supported formats.
+
+## Editing your theme generic templates
+
+The key benefit of this Post Formats feature is to let themes use a dedicated layout for each format. To do so, you can first review some generic templates such as the `index.html` one which by default is showing the published posts. Retraceur provides a specific block to let you decide which post formats will display this block inner blocks: it's the `core/post-format-part` block.
+
+<Code code={postFormatBlockTemplate} lang="html" title={fileName2} mark={highlights2} />
+
+Let's say you published 2 posts, a standard one having "My beautiful post" as title and another post using the `image` Post Format containing an image, the `index.html` template will loop into the published posts and only display "My beautiful post" for the standard one and only display the Post Format name and the post ID for the one using the `image` Post Format.
+
+<Aside>The `core/post-format-name` block is another block provided by Retraceur to output the singular name of the post's Post Format as defined into the [Post Formats administration screen](../../administration/manage-post-formats).</Aside>
+
+## Adding templates specific to Post Formats
+
+Your theme can also include a template to display a loop of posts all having the `image` Post Format (eg: when visiting the `site.url/type/images` URL of your site) differently than all other loops. To achieve this, you'll need to create a new template whose name is following this structure: 
+`taxonomy-post_format-post-format-{postFormatKey}.html`.
+
+For the `image` Post Format, it's `taxonomy-post_format-post-format-image.html`. For instance, the ["Point"](https://github.com/retraceur/coeur/blob/trunk/wp-content/themes/point/templates/taxonomy-post_format-post-format-image.html#L25) theme is providing this template to show posts in a grid.
+
+Finally, your theme may include a specific template to output the single view of a Post Format: this can save you headaches compared to using a complex `core/post-format-part` blocks combination inside the generic `single.html` template!
+
+The single template file name for Post Formats needs to follow this structure:
+`single-post-format-{postFormatKey}.html`.
+
+For instance, the ["Point"](https://github.com/retraceur/coeur/blob/trunk/wp-content/themes/point/templates/single-post-format-status.html) theme is providing a specific template to show posts having the `quote` Post Format.
