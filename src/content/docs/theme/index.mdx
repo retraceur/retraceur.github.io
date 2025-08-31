@@ -1,0 +1,53 @@
+---
+title: Build your own theme
+description: Learn how to build your very own theme to make your personal site truly unique
+sidebar:
+    order: 1
+---
+
+import { FileTree } from '@astrojs/starlight/components';
+
+A Retraceur theme holds the design of your website. It controls everything from colors, to fonts, to the entire layout. What you see when viewing the front-end of your site is mostly shaped by the theme.
+
+Basically, a theme is a folder containing configuration files and sub-folders to include your templates, template parts and patterns. So that Retraceur can grab the theme details, you need to put the theme's folder within your site's `/wp-content/themes` directory.
+
+<FileTree>
+
+- index.php
+- ...
+- wp-content/
+  - index.php
+  - ...
+  - themes/
+    - point/
+      - parts/
+      - patterns/
+      - templates/
+      - ...
+      - style.css
+      - theme.json
+- ...
+
+</FileTree>
+
+The above file tree is showing how Retraceur default's theme (`point`) is organized.
+
+## The theme's configuration files
+
+TBD
+
+## Theme templates
+
+TBD
+
+## Theme template parts
+
+TBD
+
+## Theme patterns
+
+TBD
+
+## Enjoy advanced features dedicated to the theme
+
+Retraceur offers a set of specific functionality that may be enabled within a theme. The theme needs to opt-in for the feature a support is provided for. This process have to be specified into the theme's `functions.php` file. A nice feature regarding [Retraceur positioning](https://retraceur.github.io/about/) that every Retraceur theme should support is [Post Formats](./post-formats).

@@ -1,0 +1,53 @@
+---
+title: Créer votre propre thème
+description: Apprenez à créer votre propre thème pour rendre votre site personnel vraiment unique
+sidebar:
+    order: 1
+---
+
+import { FileTree } from '@astrojs/starlight/components';
+
+Un thème Retraceur gère le design de votre site web. Il contrôle tout, des couleurs aux polices, en passant par la mise en page. Ce que vous voyez sur la partie frontale de votre site est principalement déterminé par le thème.
+
+En bref, un thème est un dossier contenant des fichiers de configuration et des sous-dossiers pour vos gabarits, portions de gabarit et compositions. Pour que Retraceur puisse récupérer les détails du thème, vous devez placer le dossier du thème dans le répertoire `/wp-content/themes` de votre site.
+
+<FileTree>
+
+- index.php
+- ...
+- wp-content/
+  - index.php
+  - ...
+  - themes/
+    - point/
+      - parts/
+      - patterns/
+      - templates/
+      - ...
+      - style.css
+      - theme.json
+- ...
+
+</FileTree>
+
+L'arborescence ci-dessus montre l'organisation du thème par défaut de Retraceur (`point`).
+
+## Les fichiers de configuration du thème
+
+À compléter
+
+## Les gabarits du thème
+
+À compléter
+
+## Les portions de gabarit du thème
+
+À compléter
+
+## Les compositions du thème
+
+À compléter
+
+## Profiter de fonctionnalités avancées dédiées au thème
+
+Retraceur propose un ensemble de fonctionnalités spécifiques activables au sein d'un thème. Le thème doit activer la fonctionnalité pour laquelle un support est fourni en le spécifiant dans le fichier `functions.php` du thème. Une fonctionnalité intéressante par rapport au [positionnement de Retraceur](https://retraceur.github.io/fr/about/) et que tout thème de Retraceur devrait supporter est celle des [Formats d'article](./post-formats).

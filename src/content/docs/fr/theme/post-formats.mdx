@@ -1,0 +1,70 @@
+---
+title: Prendre en charge les formats d'article
+description: Ce guide explique les étapes à suivre pour que votre thème prenne en charge les formats d'article et fournisse des mises en page spécifiques pour ceux pris en charge.
+sidebar:
+  order: 2
+---
+
+import { Code } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
+
+export const postFormatOptIn = `/**
+ * Déclaration de la prise en charge des formats d’article.
+ */
+function your_theme_setup() {
+
+  // Consentir au support des formats d'artcile.
+  add_theme_support( 'post-formats', array( 'link', 'status', 'image' ) );
+}
+add_action( 'after_setup_theme', 'your_theme_setup' );
+`;
+export const fileName = 'functions.php';
+export const highlights = `add_theme_support( 'post-formats', array( 'link', 'status', 'image' ) );`;
+export const postFormatBlockTemplate = `
+<!-- wp:query -->
+  <!-- wp:post-template -->
+    <!-- wp:post-format-part {"include":"standard"} -->
+      <!-- wp:post-title {"isLink":true,"level":2} /-->
+    <!-- /wp:post-format-part -->
+    <!-- wp:post-format-part {"include":"image"} -->
+      <!-- wp:post-format-name {"isLink":true,"level":2,"outputId":true} /-->
+    <!-- /wp:post-format-part -->
+  <!-- /wp:post-template -->
+<!-- /wp:query -->
+`;
+export const fileName2 = 'index.html';
+export const highlights2 = ['<!-- wp:post-format-part {"include":"standard"} -->', '<!-- /wp:post-format-part -->', '<!-- wp:post-format-part {"include":"image"} -->'];
+
+Retraceur propose une liste de 11 formats d'article : `aside`, `audio`, `chat`, `code`, `gallery`, `image`, `link`, `quote`, `status`, `video` et `standard` (qui est le format par défaut). Un thème Retraceur peut « consentir » à supporter 1 ou plusieurs formats d'article à l'aide de son fichier `functions.php`. Par exemple le thème [« Point »](https://github.com/retraceur/coeur/blob/trunk/wp-content/themes/point/functions.php#L21) (qui est celui fournit par défaut dans Retraceur) prend en charge 4 formats d'article : `link`, `status`, `image`, `quote` (le format `standard` est toujours inclus à partir du moment où le thème a consenti à prendre en charge des formats d'articles).
+
+## Consentir à supporter les formats d'article
+
+S'il n'existe pas déjà, ajoutez un fichier `functions.php` dans le dossier de votre thème pour y placer le code suivant (n'oubliez pas d'ajouter éventuellement la balise d'ouverture PHP en haut de votre fichier !).
+
+<Code code={postFormatOptIn} lang="php" title={fileName} mark={highlights} />
+
+Le code encadré indique que le thème supporte 3 formats d'article et la prochaine fois que Retraceur affichera le tableau de bord du site, ce code générera [l'écran d'administration des formats d'article](../../administration/manage-post-formats) pour permettre aux administrateurs du site de personnaliser les nom, description et portion d'URL de chacun des format supportés.
+
+## Adapter vos gabarits génériques
+
+Le principal avantage de la fonctionnalité des Formats d'article est de permettre aux thèmes d'utiliser une mise en forme dédiée pour chaque format. Pour ce faire, vous pouvez d'abord revoir les gabarits génériques, comme le gabarit `index.html`, qui affiche par défaut les articles publiés. Retraceur propose un bloc spécifique pour vous permettre de choisir les Formats d'article qui afficheront les blocs internes à ce bloc : le bloc `core/post-format-part`.
+
+<Code code={postFormatBlockTemplate} lang="html" title={fileName2} mark={highlights2} />
+
+Disons que vous avez publié 2 articles, un article standard ayant « Mon bel article » comme titre et un autre article utilisant le format d'article `image` contenant une image, le gabarit `index.html` fera une boucle dans les articles publiés et affichera uniquement « Mon bel article » pour le standard et affichera uniquement « Image n°2 » (le nom du format d'article et l'identifiant de l'article) pour celui utilisant le format d'article `image`.
+
+<Aside>Le bloc `core/post-format-name` est un autre bloc fourni par Retraceur pour afficher le nom singulier du format d'article de la publication tel que défini dans l'[écran d'administration des formats format d'article](../../administration/manage-post-formats).</Aside>
+
+## Ajouter des gabarits spécifiques aux formats d'article
+
+Votre thème peut également inclure un gabarit pour afficher une boucle d'articles dont le format d'article est `image` (par exemple, lorsque vous consultez l'URL `site.url/type/images` de votre site) différemment des autres boucles. Pour ce faire, vous devez créer un nouveau gabarit dont le nom suit la structure suivante :
+`taxonomy-post_format-post-format-{postFormatKey}.html`.
+
+Pour le format d'article `image`, le nom du gabarit est `taxonomy-post_format-post-format-image.html`. Par exemple, le thème ["Point"](https://github.com/retraceur/coeur/blob/trunk/wp-content/themes/point/templates/taxonomy-post_format-post-format-image.html#L25) fournit ce gabarit pour organiser l'affichage des articles dans une grille.
+
+Enfin, votre thème peut inclure un gabarit spécifique pour générer la vue unique d'un format d'article : cela peut vous éviter des maux de tête par rapport à l'utilisation d'une combinaison complexe de blocs `core/post-format-part` à l'intérieur du gabarit générique `single.html` !
+
+Le nom de fichier du gabarit devant afficher la vue unique d'un format d'article doit suivre cette structure :
+`single-post-format-{postFormatKey}.html`.
+
+Par exemple, le thème ["Point"](https://github.com/retraceur/coeur/blob/trunk/wp-content/themes/point/templates/single-post-format-status.html) fournit un gabarit spécifique pour afficher les articles dont le format est `quote`.

@@ -62,6 +62,14 @@ export default defineConfig({
 					autogenerate: { directory: 'administration' },
 				},
 				{
+					label: 'Build Theme',
+					translations: {
+						'fr': 'Créer un Thème',
+					},
+					collapsed: true,
+					autogenerate: { directory: 'theme' },
+				},
+				{
 					label: 'API',
 					translations: {
 						'fr': 'API',
