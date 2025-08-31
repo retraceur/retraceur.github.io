@@ -35,7 +35,7 @@ export const postFormatBlockTemplate = `
 export const fileName2 = 'index.html';
 export const highlights2 = ['<!-- wp:post-format-part {"include":"standard"} -->', '<!-- /wp:post-format-part -->', '<!-- wp:post-format-part {"include":"image"} -->'];
 
-Retraceur propose une liste de 11 formats d'article : `aside`, `audio`, `chat`, `code`, `gallery`, `image`, `link`, `quote`, `status`, `video` et `standard` (qui est le format par défaut). Un thème Retraceur peut « consentir » à supporter 1 ou plusieurs formats d'article à l'aide de son fichier `functions.php`. Par exemple le thème [« Point »](https://github.com/retraceur/coeur/blob/trunk/wp-content/themes/point/functions.php#L21) (qui est celui fournit par défaut dans Retraceur) prend en charge 4 formats d'article: `link`, `status`, `image`, `quote` (le format `standard` est toujours inclus à partir du moment où le thème a consenti à prendre en charge des formats d'articles).
+Retraceur propose une liste de 11 formats d'article : `aside`, `audio`, `chat`, `code`, `gallery`, `image`, `link`, `quote`, `status`, `video` et `standard` (qui est le format par défaut). Un thème Retraceur peut « consentir » à supporter 1 ou plusieurs formats d'article à l'aide de son fichier `functions.php`. Par exemple le thème [« Point »](https://github.com/retraceur/coeur/blob/trunk/wp-content/themes/point/functions.php#L21) (qui est celui fournit par défaut dans Retraceur) prend en charge 4 formats d'article : `link`, `status`, `image`, `quote` (le format `standard` est toujours inclus à partir du moment où le thème a consenti à prendre en charge des formats d'articles).
 
 ## Consentir à supporter les formats d'article
 
@@ -51,7 +51,7 @@ Le principal avantage de la fonctionnalité des Formats d'article est de permett
 
 <Code code={postFormatBlockTemplate} lang="html" title={fileName2} mark={highlights2} />
 
-Disons que vous avez publié 2 articles, un article standard ayant « Mon bel article » comme titre et un autre article utilisant le format d'article `image` contenant une image, le gabarit `index.html` fera une boucle dans les articles publiés et affichera uniquement « Mon bel article » pour le standard et affichera uniquement le nom du format d'article et l'identifiant de l'article pour celui utilisant le format d'article `image`.
+Disons que vous avez publié 2 articles, un article standard ayant « Mon bel article » comme titre et un autre article utilisant le format d'article `image` contenant une image, le gabarit `index.html` fera une boucle dans les articles publiés et affichera uniquement « Mon bel article » pour le standard et affichera uniquement « Image n°2 » (le nom du format d'article et l'identifiant de l'article) pour celui utilisant le format d'article `image`.
 
 <Aside>Le bloc `core/post-format-name` est un autre bloc fourni par Retraceur pour afficher le nom singulier du format d'article de la publication tel que défini dans l'[écran d'administration des formats format d'article](../../administration/manage-post-formats).</Aside>
 
