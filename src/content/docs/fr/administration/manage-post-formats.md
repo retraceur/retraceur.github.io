@@ -2,7 +2,7 @@
 title: Gestion des formats d'article
 description: Ce guide explique la manière dont vous pouvez personnaliser les noms, descriptions et portions d'URL des formats d'articles.
 sidebar:
-    order: 3
+    order: 4
 ---
 
 La fonctionnalité des formats d'article est contrôlée par le thème actif de votre site. L'interface d'administration décrite par la suite s'affichera uniquement si votre thème a déclaré sa prise en charge de cette fonctionnalité dans son fichier `functions.php`. Retraceur propose une liste de 11 formats d'article : `aside`, `audio`, `chat`, `code`, `gallery`, `image`, `link`, `quote`, `status`, `video` et `standard` (qui est le format par défaut). Un thème Retraceur peut « consentir » à supporter 1 ou plusieurs formats d'article à l'aide de son fichier `functions.php`. Par exemple le thème "Point" (qui est celui fournit par défaut dans Retraceur) prend en charge 4 formats d'article: `link`, `status`, `image`, `quote` (le format `standard` est toujours inclus à partir du moment où le thème a consenti à prendre en charge des formats d'articles). Si vous parcourez le code du [fichier `functions.php`](https://github.com/retraceur/coeur/blob/trunk/wp-content/themes/point/functions.php#L21) du thème "Point", vous découvrirez comment cette prise en charge est effectuée :

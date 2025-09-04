@@ -17,6 +17,10 @@ By default this page shows 3 Dashboard widgets:
 - The **At A Glance** widget displays a summary of the content on your site and identifies which theme and version of Retraceur you are using.
 - The **Activity** widget shows the upcoming scheduled posts as well as the recently published posts.
 
+## Dashboard Updates page
+
+This is the place where you are noticed when a new version of Retraceur is available. When it's a major version, the "Updates" sub-menu will also include a notice bubble to draw your attention. [Read more about it](./manage-updates).
+
 ## Posts Administration
 
 This administration area allows you to manage the core of your content: writing posts, defining post categories, post tags & [post formats](./manage-post-formats).

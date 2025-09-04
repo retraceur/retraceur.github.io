@@ -2,7 +2,7 @@
 title: Manage Post Formats
 description: This guide is explaining how to customize Post Format names, descriptions and URL slugs.
 sidebar:
-    order: 3
+    order: 4
 ---
 
 Post Formats is a feature controlled by your Retraceur active theme. The following Administration UI will only show if this theme has declared its support of the feature within its `functions.php` file. The Retraceur software offers a list of 11 Post Formats: `aside`, `audio`, `chat`, `code`, `gallery`, `image`, `link`, `quote`, `status`, `video` & `standard` (which is the default post format). A Retraceur theme can "opt-in" to support 1 or more Post Formats from its `functions.php` file. For instance the "Point" theme (which is the default Retraceur theme) supports 4 Post Formats: `link`, `status`, `image`, `quote` (the `standard` Post Format is always included as soon as a theme opted-in for the Post Formats feature). If you browse the "Point" [`functions.php` file](https://github.com/retraceur/coeur/blob/trunk/wp-content/themes/point/functions.php#L21), you'll see how this support is declared:

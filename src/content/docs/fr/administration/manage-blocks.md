@@ -2,7 +2,7 @@
 title: Gestion des blocs
 description: Ce guide explique comment installer, activer, mettre à jour, désactiver et supprimer des blocs Retraceur.
 sidebar:
-    order: 5
+    order: 6
 ---
 
 Bien que les blocs soient emballés comme des extensions, Retraceur a choisi de séparer leur administration de celle des extensions. Merci de noter que tous les blocs installés seront enregistrés dans des sous-répertoires du répertoire `/wp-content/plugins` et sont gérés comme des extensions pendant le processus de chargement de Retraceur. Avoir une zone d'administration spécifique vous aide simplement à directement trouver ou clairement identifier où vous pouvez gérer les blocs que vous manipulerez depuis l'éditeur de site ou l'éditeur de contenu.
