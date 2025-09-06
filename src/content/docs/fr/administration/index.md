@@ -19,7 +19,7 @@ Par défaut, cette page affiche 3 "widgets" de tableau de bord :
 
 ## Page des mise à jour du tableau de bord
 
-C'est ici que vous serez informé·e de la disponibilité d'une nouvelle version de Retraceur. S'il s'agit d'une version majeure, le sous-menu « Mises à jour » affichera également une infobulle pour attirer votre attention. [En savoir plus](./manage-updates).
+C'est ici que vous serez informé·e de la disponibilité d'une nouvelle version de Retraceur. S'il s'agit d'une version stable (majeure ou mineure), le sous-menu « Mises à jour » affichera également une infobulle pour attirer votre attention. [En savoir plus](./manage-updates).
 
 ## Administration des articles
 

@@ -19,7 +19,7 @@ By default this page shows 3 Dashboard widgets:
 
 ## Dashboard Updates page
 
-This is the place where you are noticed when a new version of Retraceur is available. When it's a major version, the "Updates" sub-menu will also include a notice bubble to draw your attention. [Read more about it](./manage-updates).
+This is the place where you are noticed when a new version of Retraceur is available. When it's a stable version (major or minor), the "Updates" sub-menu will also include a notice bubble to draw your attention. [Read more about it](./manage-updates).
 
 ## Posts Administration
 
