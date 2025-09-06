@@ -2,7 +2,7 @@
 title: Adjusting the site look and feel
 description: This guide explains how to access to the Site Editor, manage the main navigation of it, styles and customize the active theme templates & patterns.
 sidebar:
-    order: 4
+    order: 5
 ---
 
 The Site editor lets you adjust the design of the entire site including the header, footer, and everything in between, with blocks. It gives you a complete control over how your site looks.

@@ -2,7 +2,7 @@
 title: Ajustement de l'apparence du site
 description: Ce guide explique comment accéder à l'Éditeur de Site, gérer sa navigation, les styles et personnaliser la présentation des gabarits et compositions de son thème actif.
 sidebar:
-    order: 4
+    order: 5
 ---
 
 L'éditeur de site vous permet d'ajuster l'apparence de l'ensemble du site, y compris l'en-tête, le pied de page et tout le reste, grâce aux blocs. Il vous offre un contrôle total sur l'atmosphère de votre site.

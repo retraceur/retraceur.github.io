@@ -17,6 +17,10 @@ Par défaut, cette page affiche 3 "widgets" de tableau de bord :
 - Le widget **d'un coup d'œil** présente un résumé du contenu de votre site Web, le thème en cours d'utilisation ainsi que la version de Retraceur que vous utilisez.
 - Le widget d'**Activité** affiche les prochains articles prévus tout comme ceux qui ont été publiés récemment.
 
+## Page des mise à jour du tableau de bord
+
+C'est ici que vous serez informé·e de la disponibilité d'une nouvelle version de Retraceur. S'il s'agit d'une version stable (majeure ou mineure), le sous-menu « Mises à jour » affichera également une infobulle pour attirer votre attention. [En savoir plus](./manage-updates).
+
 ## Administration des articles
 
 Cette zone d'administration vous permet de gérer l'essentiel de vos publications: la rédaction des articles ainsi que la définition des catégories, étiquettes et [formats d'article](./manage-post-formats).
