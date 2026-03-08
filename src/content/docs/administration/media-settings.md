@@ -1,6 +1,6 @@
 ---
 title: Manage Media settings
-description: This guide explains what you can do from the media settings screen of your Administration.
+description: This guide explains how you can manage your website media parameters from the media settings screen of your Retraceur Administration.
 sidebar:
     order: 7
 ---

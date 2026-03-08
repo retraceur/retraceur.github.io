@@ -1,6 +1,6 @@
 ---
 title: Gestion des réglages des médias
-description: Ce guide explique ce que vous pouvez faire depuis l'écran d'administration des réglages des médias.
+description: Ce guide explique comment gérer les paramètres des médias de votre site depuis l'écran d'administration des réglages des médias de Retraceur.
 sidebar:
     order: 7
 ---
