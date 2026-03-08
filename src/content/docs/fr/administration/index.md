@@ -55,4 +55,4 @@ Cette zone d'administration vous permet de gérer vos [blocks](./manage-blocks) 
 
 ## Gestion des réglages
 
-À compléter
+L’écran [Réglages → Médias](./media-settings) permet de configurer certains paramètres globaux liés à l’utilisation des images dans Retraceur.

@@ -55,4 +55,4 @@ TBD
 
 ## Settings management
 
-TBD
+The [Settings → Media](./media-settings) screen allows you to configure global parameters related to image usage in Retraceur.
