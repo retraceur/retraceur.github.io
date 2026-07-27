@@ -1,0 +1,82 @@
+---
+title: Share your Plugin or Block
+description: Make your Plugin or Block discoverable, installable and upgradable from any Retraceur website.
+sidebar:
+    order: 2
+---
+
+import { Code } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
+
+export const manifestCode = `{
+	"$schema": "https://raw.githubusercontent.com/retraceur/ressources/refs/heads/main/schemas/retraceur-manifest.json",
+	"name": "owner/repo",
+	"type": "block",
+	"requires": {
+		"retraceur": "4.0.0",
+		"php": "7.4",
+		"dependencies": []
+	},
+	"author": {
+		"name": "Your name",
+		"url": "https://site.url"
+	}
+}
+`;
+export const pluginFileName = 'retraceur/manifest.json';
+
+When your Plugin or Block is hosted on GitHub, you can make it discoverable by the **Retraceur Discovery API**. This is not a submission to a central marketplace: Retraceur simply reads a few conventions applied directly to your repository, and discovers your project at the source — the same way any of its users would find it on [GitHub.com](https://github.com/explore).
+ 
+- your repository stays the single source of truth ;
+- Retraceur never copies or redistributes your code, it only fetches & and broadcasts it inside the Discovery Administration screen of the Websites it powers;
+- you keep full control over the versions you publish and the information you disclose.
+
+Concretely, Retraceur relies on GitHub's [Topics search REST API](https://docs.github.com/en/rest/search/search#search-topics) to find candidate repositories (for example `https://api.github.com/search/topics?q=retraceur-plugin`). To be part of that list, and then to be properly understood once found, your repository needs to meet four requirements.
+
+## 1. Add a specific [Topic](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics) to your repository
+ 
+Add one of the following topics to your GitHub repository, depending on what you are publishing:
+ 
+- `retraceur-plugin` for a Plugin ;
+- `retraceur-block` for a Block.
+
+<Aside type="tip">
+    You can add as many "topics" as you like to your repository, separated by commas (similar to post tags in Retraceur). The important thing is that one of them needs to be `retraceur-plugin` or `retraceur-block`, depending on your project type.
+</Aside>
+
+## 2. Complete your main file's header
+ 
+You already added a minimal header to get your Plugin or Block listed locally. To make it discoverable by the **Retraceur Discovery API**, a few more fields are expected:
+ 
+| <div style="width:175px">Header tag</div> | Required | Description |
+| --- | --- | --- |
+| `Plugin Name` | Yes | The display name of your Plugin or Block. |
+| `Plugin URI` | Recommended | The homepage of your project. |
+| `Plugin Type` | Blocks only | Must be set to `block` for a Block. |
+| `Description` | Yes | A short, one-sentence description. |
+| `Version` | Yes | The current version of the release. |
+| `Author` | Recommended | Who maintains the project? |
+| `Author URI` | Recommended | Where to know more about the project maintainer? |
+| `Requires Retraceur` | Recommended | The minimum Retraceur version your project supports. |
+| `Up to Retraceur` | Recommended | The highest Retraceur version your project has been tested against. |
+| `GitHub Plugin URI` | Yes | The full URL of your GitHub repository. Used by Retraceur to locate releases and metadata. |
+ 
+If `Requires Retraceur` is missing, Retraceur will still list your Plugin or Block, but it will display a warning letting the site administrator know you haven't explicitly declared it as Retraceur ready.
+ 
+## 3. Add a `retraceur` directory to your GitHub repository
+
+This directory **needs to contain** a `manifest.json` file describing metadata specific to Retraceur. As your Plugin or Block is not yet installed at this stage, this file helps the Discovey API to show users important information about your resource.
+
+<Code code={manifestCode} lang="json" title={pluginFileName} />
+
+<Aside type="tip">
+    You can also include into this directory a `PNG` image named `og-image.png`. If this file is available, the **Retraceur Discovery API** will use it to illustrate your repository inside the User's Discovery Administration screen.
+</Aside>
+ 
+## 4. Publish your releases
+ 
+Retraceur fetches distributable archives from your repository's [GitHub Releases](https://docs.github.com/en/repositories/releasing-projects-on-github). Each release must contain a ZIP asset named after your project's slug, for example `my-plugin.zip` for a project whose slug is `my-plugin`.
+ 
+## What happens next?
+ 
+Once these four steps are in place, your Plugin or Block will appear in the discovery screens of any Retraceur site — from the **Plugins** or **Blocks** administration screen's dedicated sub-menu. From there, site owners can install it, and later keep it up to date, without ever leaving their own dashboard.

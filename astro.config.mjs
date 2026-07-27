@@ -70,6 +70,14 @@ export default defineConfig({
 					autogenerate: { directory: 'theme' },
 				},
 				{
+					label: 'Build Plugins & Blocks',
+					translations: {
+						'fr': 'Créer des extensions et des blocs',
+					},
+					collapsed: true,
+					autogenerate: { directory: 'plugins' },
+				},
+				{
 					label: 'API',
 					translations: {
 						'fr': 'API',
