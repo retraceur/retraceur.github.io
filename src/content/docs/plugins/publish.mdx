@@ -6,6 +6,7 @@ sidebar:
 ---
 
 import { Code } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
 
 export const manifestCode = `{
 	"$schema": "https://raw.githubusercontent.com/retraceur/ressources/refs/heads/main/schemas/retraceur-manifest.json",
@@ -24,24 +25,28 @@ export const manifestCode = `{
 `;
 export const pluginFileName = 'retraceur/manifest.json';
 
-When your Plugin or Block is hosted on GitHub, you can make it part of the **Retraceur Discovery API**. This is not a submission to a central marketplace: Retraceur simply reads a few conventions applied directly to your repository, and discovers your project at the source — the same way any of its users would find it on GitHub.
+When your Plugin or Block is hosted on GitHub, you can make it discoverable by the **Retraceur Discovery API**. This is not a submission to a central marketplace: Retraceur simply reads a few conventions applied directly to your repository, and discovers your project at the source — the same way any of its users would find it on [GitHub.com](https://github.com/explore).
  
 - your repository stays the single source of truth ;
-- Retraceur never copies or redistributes your code, it only fetches it ;
+- Retraceur never copies or redistributes your code, it only fetches & and broadcasts it inside the Discovery Administration screen of the Websites it powers;
 - you keep full control over the versions you publish and the information you disclose.
 
 Concretely, Retraceur relies on GitHub's [Topics search REST API](https://docs.github.com/en/rest/search/search#search-topics) to find candidate repositories (for example `https://api.github.com/search/topics?q=retraceur-plugin`). To be part of that list, and then to be properly understood once found, your repository needs to meet four requirements.
 
-## 1. [Tag](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics) your repository
+## 1. Add a specific [Topic](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics) to your repository
  
 Add one of the following topics to your GitHub repository, depending on what you are publishing:
  
 - `retraceur-plugin` for a Plugin ;
 - `retraceur-block` for a Block.
 
+<Aside type="tip">
+    You can add as many "topics" as you like to your repository, separated by commas (similar to post tags in Retraceur). The important thing is that one of them needs to be `retraceur-plugin` or `retraceur-block`, depending on your project type.
+</Aside>
+
 ## 2. Complete your main file's header
  
-You already added a minimal header to get your Plugin or Block listed locally. To make it discoverable through GitHub, a few more fields are expected:
+You already added a minimal header to get your Plugin or Block listed locally. To make it discoverable by the **Retraceur Discovery API**, a few more fields are expected:
  
 | <div style="width:175px">Header tag</div> | Required | Description |
 | --- | --- | --- |
@@ -64,7 +69,9 @@ This directory **needs to contain** a `manifest.json` file describing metadata s
 
 <Code code={manifestCode} lang="json" title={pluginFileName} />
 
-Optional: you can also include into this directory a `PNG` image named `og-image.png`. If this file is available, the **Retraceur Discovery API** will use it to illustrate your repository inside the User's Discovery Administration screen.
+<Aside type="tip">
+    You can also include into this directory a `PNG` image named `og-image.png`. If this file is available, the **Retraceur Discovery API** will use it to illustrate your repository inside the User's Discovery Administration screen.
+</Aside>
  
 ## 4. Publish your releases
  

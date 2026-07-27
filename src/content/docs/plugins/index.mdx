@@ -37,15 +37,15 @@ Retraceur can be extended in two complementary ways: Plugins and Blocks. Both ar
 - A Plugin enriches Retraceur's features: it can add a new setting, a new Administration screen, change how something works behind the scenes, and so on.
 - A Block enriches the writing experience: it gives you a new way to compose your posts, your pages, or the layout of your site directly from the Block Editor.
 
-Because of this difference in purpose, Plugins are managed from the Plugins administration screen, while Blocks are managed from the Blocks administration screen. Under the hood though, a Block is a Plugin: one that happens to declare itself as such, as you'll see below.
+Because of this difference in purpose, Plugins are managed from the Plugins administration screen, while Blocks are managed from the Blocks administration screen. Under the hood though, a Block is a Plugin: one that happens to be typed as a block, as you'll see below.
 
 ## Everything starts with a single PHP file
 
-Whether you are building a Plugin or a Block, everything begins with one main PHP file — the one Retraceur will load first, often called the "boot" file. This file must contain a header comment describing your project: its name, its version, who maintains it, which versions of Retraceur it supports, and so on.
+Whether you are building a Plugin or a Block, everything begins with the main PHP file — the one Retraceur will load first, often called the "boot" file. This file must contain a header comment describing your project: its name, its version, who maintains it, which versions of Retraceur it supports, and so on.
 
 ![Plugins Administration](../../../assets/images/build-plugins-header-tags-en.png)
 
-This header is what Retraceur reads to list your project in its administration screens. Nothing else is required to get started: as soon as a valid header is found, your Plugin or Block appears — ready to be activated.
+This header comment is what Retraceur reads to list your project in its administration screens. Nothing else is required to get started: as soon as a valid header is found, your Plugin or Block appears — ready to be activated.
 
 Here is a minimal, valid header for a Plugin:
 

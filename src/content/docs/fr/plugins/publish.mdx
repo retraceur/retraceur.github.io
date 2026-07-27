@@ -6,6 +6,7 @@ sidebar:
 ---
 
 import { Code } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
 
 export const manifestCode = `{
 	"$schema": "https://raw.githubusercontent.com/retraceur/ressources/refs/heads/main/schemas/retraceur-manifest.json",
@@ -24,24 +25,27 @@ export const manifestCode = `{
 `;
 export const pluginFileName = 'retraceur/manifest.json';
 
-Lorsque votre extension ou votre bloc sont hébergés sur GitHub, vous pouvez les intégrer à l'**API de découverte de Retraceur**. Il ne s'agit pas d'une soumission à une place de marché centralisée : Retraceur se contente de lire quelques conventions appliquées directement à votre dépôt et découvre votre projet à la source, de la même manière que n'importe lequel de ses utilisateur·rice·s le trouverait sur GitHub.
+Lorsque votre extension ou votre bloc sont hébergés sur GitHub, vous pouvez les rendre « découvrable » par l'**API de découverte de Retraceur**. Il ne s'agit pas d'une soumission à une place de marché centralisée : Retraceur se contente de lire quelques conventions appliquées directement à votre dépôt et découvre votre projet à la source, de la même manière que n'importe lequel de ses utilisateur·rice·s le découvrirait sur [GitHub.com](https://github.com/explore).
 
 - votre dépôt reste la seule source de référence ;
-- Retraceur ne copie ni ne redistribue jamais votre code, il se contente de le récupérer ;
+- Retraceur ne copie ni ne redistribue jamais votre code, il se contente de le récupérer et de le diffuser dans l'administration des sites qu'il motorise ;
 - vous gardez le contrôle total sur les versions que vous publiez et les informations que vous divulguez.
 
 Concrètement, Retraceur s'appuie sur l'[API REST de recherche par sujets](https://docs.github.com/fr/rest/search/search#search-topics) de GitHub pour trouver des dépôts candidats (par exemple `https://api.github.com/search/topics?q=retraceur-plugin`). Pour figurer dans cette liste, et pour être correctement interprété une fois trouvé, votre dépôt doit répondre à quatre critères.
 
-## 1. Ajoutez une [étiquette](https://docs.github.com/fr/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics) à votre dépôt
+## 1. Ajoutez un « [topic](https://docs.github.com/fr/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics) » à votre dépôt
  
-Ajoutez l'une des étiquettes suivantes à votre dépôt GitHub, en fonction de ce que vous publiez :
+Ajoutez l'un des « topics » suivante à votre dépôt GitHub, en fonction de ce que vous publiez :
  
 - `retraceur-plugin` pour une extension ;
 - `retraceur-block` pour un bloc.
 
+<Aside type="tip">
+	Vous pouvez ajouter autant de « topics » séparés par des virgules à votre dépôt (un peu comme les étiquettes d'article dans Retraceur. L'essentiel est que l'un d'entre eux soit `retraceur-plugin` ou `retraceur-block` en fonction du type de votre projet.
+</Aside>
 ## 2. Complétez le commantaire d'en-tête de votre fichier PHP principal
  
-Vous avez déjà ajouté un en-tête minimal pour que votre extension ou votre bloc apparaissent dans l'écran d'administration correspondant. Pour qu'ils soient référencés sur GitHub, quelques champs supplémentaires sont requis :
+Vous avez déjà ajouté un commentaire d'en-tête minimal pour que votre extension ou votre bloc apparaissent dans l'écran d'administration correspondant. Pour qu'ils soient « découvrables » par l'**API de découverte de Retraceur**, quelques champs supplémentaires sont requis :
  
 | <div style="width:175px">En-tête</div> | Requise ? | Description |
 | --- | --- | --- |
@@ -56,7 +60,7 @@ Vous avez déjà ajouté un en-tête minimal pour que votre extension ou votre b
 | `Up to Retraceur` | Recommandée | La version la plus récente de Retraceur avec laquelle votre projet a été testé. |
 | `GitHub Plugin URI` | Oui | L'URL complète de votre dépôt GitHub. Elle est utilisée par Retraceur pour localiser les versions et les métadonnées de votre projet. |
  
-Si l'en-tête « Requires Retraceur » n'apparaît pas, Retraceur affichera tout de même votre extension ou votre bloc, mais affichera un avertissement informant l'administrateur·rice du site que vous ne les avez pas explicitement déclarés compatibles avec Retraceur.
+Si l'en-tête « Requires Retraceur » n'apparaît pas, Retraceur affichera tout de même votre extension ou votre bloc, toutefois un avertissement informant l'administrateur·rice du site que vous ne les avez pas explicitement déclarés compatibles avec Retraceur sera inséré sous le descriptif de votre extension ou de votre bloc.
  
 ## 3. Ajoutez un répertoire « retraceur » à votre dépôt GitHub
 
@@ -64,7 +68,9 @@ Ce répertoire **doit contenir** un fichier `manifest.json` décrivant les méta
 
 <Code code={manifestCode} lang="json" title={pluginFileName} />
 
-Facultatif : vous pouvez également ajouter dans ce répertoire une image `PNG` nommée `og-image.png`. Si ce fichier est présent, l'**API de découverte de Retraceur** l'utilisera pour illustrer votre dépôt dans l'écran d'administration de découverte des extensions ou des blocs du site de l'utilisateur·rice.
+<Aside type="tip">
+	Vous pouvez également ajouter dans ce répertoire une image `PNG` nommée `og-image.png`. Si ce fichier est présent, l'**API de découverte de Retraceur** l'utilisera pour illustrer votre dépôt dans l'écran d'administration de découverte des extensions ou des blocs du site de l'utilisateur·rice.
+</Aside>
  
 ## 4. Publiez vos versions
  

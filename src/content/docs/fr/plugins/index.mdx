@@ -1,6 +1,6 @@
 ---
 title: Créer des extensions et des blocs
-description: Comprendre ce qu'une extension et un bloc sont, et apprendre comment en organiser à partir d'un fichier vide.
+description: Comprendre ce qu'une extension et un bloc sont, et apprendre comment en organiser à partir de 0.
 sidebar:
     order: 1
 ---
@@ -37,21 +37,21 @@ Retraceur peut être étendu de deux manières complémentaires : les extensions
 - Une extension enrichit les fonctionnalités de Retraceur : elle peut ajouter un nouveau paramètre, un nouvel écran d’administration, modifier le fonctionnement en arrière-plan, etc.
 - Un bloc enrichit l’expérience de rédaction : il vous offre une nouvelle façon de composer vos articles, vos pages ou d'organiser la mise en page de votre site directement depuis l’éditeur de blocs.
 
-En raison de cette différence de finalité, les extensions sont gérées depuis l’écran d’administration des Extensions, tandis que les blocs sont gérés depuis l’écran d’administration des Blocs. En réalité, un bloc est une extension : une extension qui se déclare comme tel, comme vous le verrez ci-après.
+En raison de cette différence de finalité, les extensions sont gérées depuis l’écran d’administration des Extensions, tandis que les blocs sont gérés depuis l’écran d’administration des Blocs. En réalité, un bloc est une extension : une extension typée comme étant un bloc, comme vous le verrez ci-après.
 
 ## Tout commence par un simple fichier PHP 
 
-Que vous développiez une extension ou un bloc, tout commence par un fichier PHP principal — celui que Retraceur chargera en premier, souvent appelé fichier « boot ». Ce fichier doit contenir un commentaire d'en-tête décrivant votre projet : son nom, sa version, son responsable, les versions de Retraceur qu'il prend en charge, etc.
+Que vous développiez une extension ou un bloc, tout commence par le fichier PHP principal — celui que Retraceur chargera en premier, souvent appelé fichier de « boot ». Ce fichier doit contenir un commentaire d'en-tête décrivant votre projet : son nom, sa version, son responsable, les versions de Retraceur qu'il prend en charge, etc.
 
 ![Administration des extensions](../../../../assets/images/build-plugins-header-tags-fr.png)
 
-Ce commentaire d'en-tête est ce que Retraceur examine pour lister votre projet dans l'écran d'administration de votre site. C'est tout ce qui est nécessaire pour démarrer : dès qu'un commentaire d'en-tête valide est trouvé et analysé, votre extension ou votre bloc apparaissent et sont prêts à être activés.
+Ce commentaire d'en-tête est ce que Retraceur examine pour lister votre projet dans les écrans d'administration des extensions ou des blocs de votre site. C'est tout ce qui est nécessaire pour démarrer : dès qu'un commentaire d'en-tête valide est trouvé et analysé, votre extension ou votre bloc apparaissent et sont prêts à être activés.
 
 Voici un commentaire d'en-tête minimaliste valide pour une extension :
 
 <Code code={pluginCode} lang="php" title={pluginFileName} />
 
-Pour la transformer en bloc à la place, il suffit d'ajouter cette ligne dans le commentaire : `Plugin Type: block`.
+Pour la transformer en bloc, il suffit d'ajouter cette ligne dans le commentaire d'en-tête : `Plugin Type: block`.
 
 <Code code={blockCode} lang="php" title={blockFileName} mark={highlight} />
 
@@ -87,7 +87,7 @@ Aucun de ces fichiers supplémentaires n'est lu par Retraceur : ils sont destin�
 | **README.md** | Présente les fonctionnalités de votre extension / bloc et explique comment l'installer. |
 | **CHANGELOG.md** | Permet de suivre les modifications apportées d'une version à l'autre. |
 | **CONTRIBUTING.md** | Explique comment les autres peuvent aider. |
-| **CODE_OF_CONDUCT.md** | Explique comment les autres doivent se comporter lorsqu'ils·elles apportent leur contribution. |
+| **CODE_OF_CONDUCT.md** | Explique comment les autres doivent se comporter lorsqu'ils·elles apportent leurs contributions. |
 | **SECURITY.md** | Explique aux utilisateur·rice·s comment signaler une faille de sécurité de manière responsable. |
 | **LICENSE.md** | Précise les conditions dans lesquelles votre code peut être réutilisé. Retraceur étant distribué sous licence GNU GPL v2.0, assurez-vous que la licence que vous choisissez soit compatible avec celle-ci. |
 
