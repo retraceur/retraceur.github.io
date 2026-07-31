@@ -2,7 +2,7 @@
 title: Manage Media settings
 description: This guide explains how you can manage your website media parameters from the media settings screen of your Retraceur Administration.
 sidebar:
-    order: 7
+    order: 8
 ---
 
 The **Settings → Media** screen allows you to define global parameters related to how images are used in Retraceur. These settings include: the site icon, the default Open Graph image, the image sizes generated when uploading a file. These parameters apply to the entire site.

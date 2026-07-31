@@ -43,7 +43,7 @@ TBD
 
 ## Blocks management
 
-This administration area allows you to manage [blocks](./manage-blocks): their installation & their activation.
+This administration area allows you to manage [blocks](./manage-blocks): their installation & their activation. You can also [discover blocks](./discover-blocks) shared by all Retraceur users.
 
 ## Users management
 
