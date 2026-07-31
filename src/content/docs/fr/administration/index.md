@@ -43,7 +43,7 @@ C'est ici que vous managez vos thèmes (installation & activation), c'est aussi 
 
 ## Gestions des blocs
 
-Cette zone d'administration vous permet de gérer vos [blocks](./manage-blocks) : leur installation et leur activation.
+Cette zone d'administration vous permet de gérer vos [blocks](./manage-blocks) : leur installation et leur activation. Vous pourrez également y [découvrir des blocs](./discover-blocks) partagés avec l’ensemble des utilisateur·rice·s de Retraceur.
 
 ## Gestions des utilisateur·ice·s
 
