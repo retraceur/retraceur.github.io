@@ -7,11 +7,11 @@ sidebar:
 
 Garder le cœur de Retraceur à jour est essentiel ! Introduit dans la version 2.0.0 du logiciel, la première partie de cet écran d'administration vous permet de vous en assurer de la manière la plus efficace : celle que vous préférez. Dès qu'une nouvelle version de Retraceur sera disponible, une nouvelle section sera ajoutée sous la section « Version actuelle » pour vous permettre gérer cette mise à niveau.
 
-La version 4.0.0 de Retraceur a ajouté la gestion des mises à jour des extensions et des blocs dans la deuxième partie de cet écran d'administration, en faisant le point central et unique pour la mise à jour de votre site web.
+La version 4.0.0 de Retraceur a ajouté la gestion des mises à jour des extensions et des blocs dans la deuxième partie de cet écran d'administration, en faisant le point central et unique pour la mise à jour de votre site Web.
 
 ## Mise à niveau du cœur
 
-Pour accéder à l'écran des « Mises à niveau », il vous suffit de passer la souris au-dessus du tout premier élément du menu, le « Tableau de bord », afin de faire apparaître le sous-menu « Mises à jour ». Cliquez dessus pour ouvrir la page d'administration correspondante.
+Pour accéder à l'écran des «&nbsp;Mises à niveau&nbsp;», il vous suffit de passer la souris au-dessus du tout premier élément du menu, le «&nbsp;Tableau de bord&nbsp;», afin de faire apparaître le sous-menu «&nbsp;Mises à jour&nbsp;». Cliquez dessus pour ouvrir la page d'administration correspondante.
 
 ### La mise à niveau en 1 clic
 
@@ -35,11 +35,11 @@ Toutes les nouvelles versions de Retraceur seront répertoriées dans cet écran
 
 ## Mise à niveau des extensions et des blocs
 
-La mise à jour des extensions et des blocs s'effectue depuis le même écran des «&nbsp;Mises à niveau&nbsp;»&nbsp;;&nbsp;vous trouverez, sous la section « Mises à niveau de Retraceur », celle dédiée aux plugins et aux blocs.
+La mise à jour des extensions et des blocs s'effectue depuis le même écran des «&nbsp;Mises à niveau&nbsp;»&nbsp;;&nbsp;vous trouverez, sous la section «&nbsp;Mises à niveau de Retraceur&nbsp;», celle dédiée aux plugins et aux blocs.
 
 ![Mise à jour des extensions/blocs](../../../../assets/images/update-plugin-block-fr-001.png)
 
-Cochez les cases correspondant aux blocs et/ou aux extensions que vous souhaitez mettre à jour, puis cliquez sur l'un des boutons « Mettre à jour extensions et blocs » pour lancer le processus.
+Cochez les cases correspondant aux blocs et/ou aux extensions que vous souhaitez mettre à jour, puis cliquez sur l'un des boutons «&nbsp;Mettre à jour extensions et blocs&nbsp;» pour lancer le processus.
 
 ![Sélection des extensions/blocs à mettre à jour](../../../../assets/images/update-plugin-block-fr-002.png)
 
