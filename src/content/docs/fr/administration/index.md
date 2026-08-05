@@ -39,7 +39,7 @@ C'est ici que vous managez vos thèmes (installation & activation), c'est aussi 
 
 ## Gestion des extensions
 
-À compléter
+Cette zone d'administration vous permet de gérer vos [extensions](./manage-plugins) : leur installation et leur activation.
 
 ## Gestions des blocs
 
