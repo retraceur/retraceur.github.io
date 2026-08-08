@@ -2,7 +2,7 @@
 title: Gestion des réglages des médias
 description: Ce guide explique comment gérer les paramètres des médias de votre site depuis l'écran d'administration des réglages des médias de Retraceur.
 sidebar:
-    order: 8
+    order: 9
 ---
 
 L’écran d'administration des **Réglages → Médias** permet de définir certains paramètres globaux liés à l’utilisation des images dans Retraceur. Ces réglages concernent notamment : l’icône du site, l’image Open Graph utilisée par défaut, les tailles d’images générées lors de l’envoi d’un fichier. Ces paramètres s’appliquent à l’ensemble du site.
