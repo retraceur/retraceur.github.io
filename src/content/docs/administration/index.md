@@ -39,7 +39,7 @@ This is the place where you manage themes (installation & activation) as well as
 
 ## Plugins management
 
-TBD
+This administration area allows you to manage your [Plugins](./manage-plugins): their installation and activation.
 
 ## Blocks management
 
